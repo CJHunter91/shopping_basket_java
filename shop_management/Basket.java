@@ -21,11 +21,11 @@ public class Basket{
   }
 
   public double getTotal(){
-    int total = 0;
+    double total = 0;
     for(Item item : basket){
       total += item.getPrice();
     }
-    
+    total = overTwentyDiscount(total);
     return loyalDiscount(total);
   }
 
@@ -39,6 +39,13 @@ public class Basket{
 
   public void clearBasket(){
     this.basket.clear();
+  }
+
+  public double overTwentyDiscount(double total){
+    if(total > 20.0){
+      return total *= 0.8;
+    }
+    return total;
   }
 
   public double loyalDiscount(double total){
