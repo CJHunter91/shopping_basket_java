@@ -23,10 +23,10 @@ public class BasketTest{
     assertEquals(0, basket.getCount());
   }
 
-  // @Test
-  // public void canAddItemToBasket(){
-  //   basket.add(item);
-  //   assertEquals(1, )
-  // }
+  @Test
+  public void canAddItemToBasket(){
+    basket.add(item);
+    assertEquals(1, basket.getCount());
+  }
 
 }
