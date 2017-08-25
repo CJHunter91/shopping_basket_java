@@ -20,6 +20,14 @@ public class Basket{
     return this.basket.size();
   }
 
+  public int getTotal(){
+    int total = 0;
+    for(Item item : basket){
+      total += item.getPrice();
+    }
+    return total;
+  }
+
   public  void addToBasket(Item item){
     this.basket.add(item);
   }
