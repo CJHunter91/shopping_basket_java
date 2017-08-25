@@ -23,4 +23,8 @@ public class Basket{
   public  void addToBasket(Item item){
     this.basket.add(item);
   }
+
+  public void removeLastItem(){
+    this.basket.remove(getCount() - 1);
+  }
 }
