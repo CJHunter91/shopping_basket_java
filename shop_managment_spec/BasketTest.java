@@ -36,4 +36,12 @@ public class BasketTest{
     assertEquals(0, basket.getCount());
   }
 
+  @Test
+  public void canClearBasket(){
+    basket.addToBasket(item);
+    basket.addToBasket(item);
+    basket.clearBasket();
+    assertEquals(0, basket.getCount());
+  }
+
 }
