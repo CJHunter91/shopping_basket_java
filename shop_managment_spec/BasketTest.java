@@ -77,4 +77,15 @@ public class BasketTest{
     assertEquals(22.50, basket.getTotal(), 0.01);
   }
 
+  @Test
+  public void canGetDiscountOver20WithLoyalty(){
+    Basket loyalBasket = new Basket(true);
+    loyalBasket.addToBasket(item);
+    loyalBasket.addToBasket(item);
+    loyalBasket.addToBasket(item);
+    loyalBasket.addToBasket(item);
+    loyalBasket.addToBasket(item);
+    assertEquals(22.05, loyalBasket.getTotal(), 0.01);
+  }
+
 }
