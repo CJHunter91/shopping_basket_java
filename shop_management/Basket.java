@@ -19,4 +19,8 @@ public class Basket{
   public int getCount(){
     return this.basket.size();
   }
+
+  public  void addToBasket(Item item){
+    this.basket.add(item);
+  }
 }
