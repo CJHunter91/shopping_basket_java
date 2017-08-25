@@ -10,7 +10,7 @@ public class BasketTest{
   @Before
   public void before(){
     basket = new Basket(false);
-    item = new Item("socks", 20.0);
+    item = new Item("socks", 5.0);
   }
 
   @Test
@@ -56,7 +56,7 @@ public class BasketTest{
   public void canGetTotal(){
     basket.addToBasket(item);
     basket.addToBasket(item);
-    assertEquals(40.0, basket.getTotal(), 0.01);
+    assertEquals(10.0, basket.getTotal(), 0.01);
   }
 
   @Test
@@ -64,7 +64,17 @@ public class BasketTest{
     Basket loyalBasket = new Basket(true);
     loyalBasket.addToBasket(item);
     loyalBasket.addToBasket(item);
-    assertEquals(39.2, loyalBasket.getTotal(), 0.01);
+    assertEquals(9.8, loyalBasket.getTotal(), 0.01);
+  }
+
+  @Test
+  public void canGetDiscountOver20WithoutLoyalty(){
+    basket.addToBasket(item);
+    basket.addToBasket(item);
+    basket.addToBasket(item);
+    basket.addToBasket(item);
+    basket.addToBasket(item);
+    assertEquals(20, basket.getTotal(), 0.01);
   }
 
 }

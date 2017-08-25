@@ -25,6 +25,7 @@ public class Basket{
     for(Item item : basket){
       total += item.getPrice();
     }
+    
     return loyalDiscount(total);
   }
 
