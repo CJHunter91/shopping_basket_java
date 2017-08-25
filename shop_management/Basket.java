@@ -20,7 +20,7 @@ public class Basket{
     return this.basket.size();
   }
 
-  public int getTotal(){
+  public double getTotal(){
     int total = 0;
     for(Item item : basket){
       total += item.getPrice();

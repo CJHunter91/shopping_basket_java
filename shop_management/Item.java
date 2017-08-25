@@ -3,9 +3,9 @@ package shop_management;
 public class Item{
 
   private String name;
-  private int price;
+  private double price;
 
-  public Item(String name, int price){
+  public Item(String name, double price){
     this.name = name;
     this.price = price;
   }
@@ -14,7 +14,7 @@ public class Item{
     return this.name;
   }
 
-  public int getPrice(){
+  public double getPrice(){
     return this.price;
   }
 }

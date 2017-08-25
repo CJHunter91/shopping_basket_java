@@ -6,13 +6,13 @@ public class ItemTest{
 
   @Test
   public void canGetItemName(){
-    Item item = new Item("socks", 10);
+    Item item = new Item("socks", 10.0);
     assertEquals("socks", item.getName());
   }
 
   @Test
   public void canGetPrice(){
-    Item item = new Item("socks", 10);
-    assertEquals(10, item.getPrice());
+    Item item = new Item("socks", 10.0);
+    assertEquals(10.0, item.getPrice(), 0.01);
   }
 }
