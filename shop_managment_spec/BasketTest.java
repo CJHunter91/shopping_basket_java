@@ -52,4 +52,11 @@ public class BasketTest{
     assertEquals(0, basket.getCount());
   }
 
+  @Test 
+  public void canGetTotal(){
+    basket.addToBasket(item);
+    basket.addToBasket(item);
+    assertEquals(40, basket.getTotal());
+  }
+
 }
