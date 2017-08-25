@@ -30,6 +30,14 @@ public class BasketTest{
   }
 
   @Test
+  public void canAddMoreItemsToBasket(){
+    basket.addToBasket(item);
+    basket.addToBasket(item);
+    basket.addToBasket(item);
+    assertEquals(3, basket.getCount());
+  }
+
+  @Test
   public void canRemoveItemFromBasket(){
     basket.addToBasket(item);
     basket.removeLastItem();
