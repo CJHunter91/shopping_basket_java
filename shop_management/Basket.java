@@ -28,5 +28,7 @@ public class Basket{
     this.basket.remove(getCount() - 1);
   }
 
-  
+  public void clearBasket(){
+    this.basket.clear();
+  }
 }
