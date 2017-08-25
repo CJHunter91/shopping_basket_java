@@ -74,7 +74,7 @@ public class BasketTest{
     basket.addToBasket(item);
     basket.addToBasket(item);
     basket.addToBasket(item);
-    assertEquals(20, basket.getTotal(), 0.01);
+    assertEquals(22.50, basket.getTotal(), 0.01);
   }
 
 }

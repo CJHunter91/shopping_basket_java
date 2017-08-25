@@ -42,8 +42,9 @@ public class Basket{
   }
 
   public double overTwentyDiscount(double total){
+    //10% off
     if(total > 20.0){
-      return total *= 0.8;
+      return total *= 0.9;
     }
     return total;
   }
