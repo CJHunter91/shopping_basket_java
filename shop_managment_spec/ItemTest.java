@@ -21,4 +21,9 @@ public class ItemTest{
     Item item = new Item("socks", 10.0);
     assertEquals(false, item.isBogof());
   }
+  @Test
+  public void canSetBogof(){
+    item.setBogof();
+    assertEquals(true, item.isBogof());
+  }
 }
