@@ -20,6 +20,15 @@ public class Item{
     return this.price;
   }
 
+  public void setBogof(){
+    if(this.bogof){
+      this.bogof = false;
+    }
+    else{
+      this.bogof = true;
+    }
+  }
+
   public boolean isBogof(){
     return this.bogof;
   }
