@@ -96,4 +96,14 @@ public class BasketTest{
     assertEquals(5, basket.getTotal(), 0.01);
   }
 
+  @Test
+  public void canGetBogofDiscountWithMoreItems(){
+    item.setBogof();
+    basket.addToBasket(item);
+    basket.addToBasket(item);
+    basket.addToBasket(item);
+    basket.addToBasket(item);
+    assertEquals(10, basket.getTotal(), 0.01);
+  }
+
 }

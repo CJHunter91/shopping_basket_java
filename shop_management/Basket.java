@@ -62,6 +62,9 @@ public class Basket{
   public double bogofDiscount(double total){
     HashMap<Sellable, Integer> itemCount = new HashMap<>();
     ArrayList<Sellable> temp = new ArrayList<>();
+
+    //loop through the basket and add any bogof items to the temp array and hash
+    // 1 is added to keys that already exist in the hash
     for(Sellable item : basket){
       if(itemCount.containsKey(item)){
         itemCount.put(item, itemCount.get(item) + 1);
@@ -71,6 +74,7 @@ public class Basket{
         temp.add(item);
       }
     }
+    //loop through the temp to access each itemCount to determine how mush money to remove from total
     for(Sellable item : temp){
       int halfTheItems = itemCount.get(item) / 2;
       for(int i = 1; i <= halfTheItems; i++){
