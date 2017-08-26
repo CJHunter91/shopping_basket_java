@@ -38,6 +38,6 @@ public class ItemTest{
   @Test
   public void canGetItemId(){
     Item item = new Item("socks", 10.0);
-    assertEquals(0, item.getId);
+    assertEquals(0, item.getId());
   }
 }

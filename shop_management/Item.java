@@ -5,11 +5,17 @@ public class Item{
   private String name;
   private double price;
   private boolean bogof;
+  private long id;
 
   public Item(String name, double price){
+    this.id = 0;
     this.name = name;
     this.price = price;
     this.bogof = false;
+  }
+
+  public long getId(){
+    return this.id;
   }
 
   public String getName(){
