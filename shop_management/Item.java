@@ -1,6 +1,7 @@
 package shop_management;
+import behaviours.*;
 
-public class Item{
+public class Item implements Sellable{
 
   private String name;
   private double price;

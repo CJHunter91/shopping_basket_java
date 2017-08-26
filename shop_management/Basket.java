@@ -56,4 +56,8 @@ public class Basket{
     }
     return total;
   }
+
+  // public double bogofDiscount(){
+  //   for(Sellable )
+  // }
 }
