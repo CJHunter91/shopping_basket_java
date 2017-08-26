@@ -34,4 +34,10 @@ public class ItemTest{
     item.setBogof();
     assertEquals(false, item.isBogof());
   }
+
+  @Test
+  public void canGetItemId(){
+    Item item = new Item("socks", 10.0);
+    assertEquals(0, item.getId);
+  }
 }
