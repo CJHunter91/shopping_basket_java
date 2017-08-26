@@ -15,4 +15,10 @@ public class ItemTest{
     Item item = new Item("socks", 10.0);
     assertEquals(10.0, item.getPrice(), 0.01);
   }
+
+  @Test
+  public void canCheckItemIsBogof(){
+    Item item = new Item("socks", 10.0);
+    assertEquals(false, item.isBogof());
+  }
 }
