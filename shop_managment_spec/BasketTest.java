@@ -88,4 +88,12 @@ public class BasketTest{
     assertEquals(22.05, loyalBasket.getTotal(), 0.01);
   }
 
+  @Test
+  public void canGetBogofDiscount(){
+    item.setBogof();
+    basket.addToBasket(item);
+    basket.addToBasket(item);
+    assertEquals(5, basket.getTotal(), 0.01);
+  }
+
 }
