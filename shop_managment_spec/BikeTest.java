@@ -25,4 +25,9 @@ public class BikeTest{
   public void canGetName(){
     assertEquals("Road", bike.getName());
   }
+
+  @Test
+  public void canGetPrice(){
+    assertEquals(100.0, bike.getPrice(), 0.01);
+  }
 }
