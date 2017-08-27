@@ -6,7 +6,7 @@ public class Bike extends Item{
   protected String colour;
   protected long id;
 
-  public Bike(String colour, int gearNumber, String name, double price){
+  public Bike(String name, double price, String colour, int gearNumber){
     super(name, price);
     this.colour = colour;
     this.gearNumber = gearNumber;

@@ -6,11 +6,13 @@ public class BasketTest{
 
   Basket basket;
   Item item;
+  Bike bike;
 
   @Before
   public void before(){
     basket = new Basket(false);
     item = new Item("socks", 5.0);
+    bike = new Bike("MTB", 150.0, "Green", 11);
   }
 
   @Test
@@ -134,6 +136,11 @@ public class BasketTest{
     item2.setBogof();
     basket.addToBasket(item2);
     assertEquals(5, basket.getTotal(), 0.01);
+  }
+
+  @Test
+  public void canAddBikesAndItemsToBasket(){
+
   }
 
 

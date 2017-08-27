@@ -8,7 +8,7 @@ public class BikeTest{
 
   @Before
   public void before(){
-    bike = new Bike("Red", 20, "Road", 100.0 );
+    bike = new Bike("Road", 100.0, "Red", 20);
   }
 
   @Test
