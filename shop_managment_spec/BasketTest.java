@@ -126,5 +126,15 @@ public class BasketTest{
     assertEquals(15, basket.getTotal(), 0.01);
   }
 
+  @Test
+  public void testBogoffWithDifferentObjectsOfSameClass(){
+    item.setBogof();
+    basket.addToBasket(item);
+    Item item2 = new Item("socks", 5.0);
+    item2.setBogof();
+    basket.addToBasket(item2);
+    assertEquals(5, basket.getTotal(), 0.01);
+  }
+
 
 }
