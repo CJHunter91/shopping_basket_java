@@ -6,7 +6,7 @@ import behaviours.*;
 public class Basket{
 
   private boolean loyalty;
-  private ArrayList<Item> basket;
+  private ArrayList<Sellable> basket;
 
   public Basket(boolean loyalty){
     this.loyalty = loyalty;
@@ -23,7 +23,7 @@ public class Basket{
 
   public double getTotal(){
     double total = 0;
-    for(Item item : basket){
+    for(Sellable item : basket){
       total += item.getPrice();
     }
     total = bogofDiscount(total);
@@ -31,7 +31,7 @@ public class Basket{
     return loyalDiscount(total);
   }
 
-  public  void addToBasket(Item item){
+  public  void addToBasket(Sellable item){
     this.basket.add(item);
   }
 
@@ -58,6 +58,7 @@ public class Basket{
     }
     return total;
   }
+
 
   public double bogofDiscount(double total){
     HashMap<Sellable, Integer> itemCount = new HashMap<>();

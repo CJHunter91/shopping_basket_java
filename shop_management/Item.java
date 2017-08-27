@@ -39,4 +39,12 @@ public class Item implements Sellable{
   public boolean isBogof(){
     return this.bogof;
   }
+
+  // @Overriden 
+  // public boolean equals(Item item){
+  //   if(this == item){
+  //     return true
+  //   }
+  //   else if
+  // }
 }

@@ -115,5 +115,16 @@ public class BasketTest{
     assertEquals(10, basket.getTotal(), 0.01);
   }
 
+  @Test 
+  public void testBogoffOnlyRemovesValidItemsFromTotal(){
+    item.setBogof();
+    basket.addToBasket(item);
+    basket.addToBasket(item);
+    Item item2 = new Item("socks", 5.0);
+    basket.addToBasket(item2);
+    basket.addToBasket(item2);
+    assertEquals(15, basket.getTotal(), 0.01);
+  }
+
 
 }
