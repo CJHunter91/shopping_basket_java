@@ -145,5 +145,14 @@ public class BasketTest{
     assertEquals(2, basket.getCount());
   }
 
+  @Test
+  public void bogofOnBikesAndItems(){
+    item.setBogof();
+    bike.setBogof();
+    basket.addToBasket(item);
+    basket.addToBasket(bike);
+    assertEquals(139.5, basket.getTotal(), 0.01);
+  }
+
 
 }
