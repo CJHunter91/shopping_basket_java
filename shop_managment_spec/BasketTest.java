@@ -140,7 +140,9 @@ public class BasketTest{
 
   @Test
   public void canAddBikesAndItemsToBasket(){
-
+    basket.addToBasket(item);
+    basket.addToBasket(bike);
+    assertEquals(2, basket.getCount());
   }
 
 
