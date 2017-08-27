@@ -3,10 +3,10 @@ import behaviours.*;
 
 public class Item implements Sellable{
 
-  private String name;
-  private double price;
-  private boolean bogof;
-  private long id;
+  protected String name;
+  protected double price;
+  protected boolean bogof;
+  protected long id;
 
   public Item(String name, double price){
     this.id = 0;
@@ -40,11 +40,4 @@ public class Item implements Sellable{
     return this.bogof;
   }
 
-  // @Overriden 
-  // public boolean equals(Item item){
-  //   if(this == item){
-  //     return true
-  //   }
-  //   else if
-  // }
 }

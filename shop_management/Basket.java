@@ -64,7 +64,8 @@ public class Basket{
     HashMap<Long, Integer> itemCount = new HashMap<>();
     ArrayList<Sellable> temp = new ArrayList<>();
 
-    //loop through the basket and add any bogof items to the temp array and hash
+    //loop through the basket and add any bogof items to the temp array and hash as Long
+    //this allows objects of the same Class to be added and not neccesarily bogof on that object 
     // 1 is added to keys that already exist in the hash
     for(Sellable item : basket){
       if(item.isBogof() && itemCount.containsKey(item.getId())){
