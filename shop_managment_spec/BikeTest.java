@@ -30,4 +30,15 @@ public class BikeTest{
   public void canGetPrice(){
     assertEquals(100.0, bike.getPrice(), 0.01);
   }
+
+  @Test
+  public void isBogof(){
+    assertEquals(false, bike.isBogof());
+  }
+
+  @Test
+  public void canSetBogof(){
+    bike.setBogof();
+    assertEquals(true, bike.isBogof());
+  }
 }
